@@ -7,7 +7,12 @@
   - name: Test
     shell: touch /tmp/THIS_IS_MY_TEST
   - name: Test more
-    shell: ls -l /tmp
+    shell: ls -l /
     register: output
   - name: Show output
     debug: msg={{ output }}
+  - name: Test more
+    shell: hostname
+    register: output2
+  - name: Show output2
+    debug: msg={{ output2 }}
