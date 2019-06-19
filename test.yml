@@ -6,3 +6,8 @@
   tasks:
   - name: Test
     shell: touch /tmp/THIS_IS_MY_TEST
+  - name: Test more
+    shell: ls -l /tmp
+    register: output
+  - name: Show output
+    debug: msg={{ output }}
