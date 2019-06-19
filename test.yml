@@ -1,0 +1,8 @@
+- name: This is a test...
+  hosts: all
+  gather_facts: no
+  vars:
+    ansible_python_interpreter: "/var/lib/awx/venv/awx/bin/python"
+  tasks:
+  - name: Test
+    shell: touch /tmp/THIS_IS_MY_TEST
